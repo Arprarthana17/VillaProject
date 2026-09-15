@@ -1278,3 +1278,30 @@ if os.path.exists(mtl_path):
     print(f"MTL SIZE: {mtl_size/1024:.1f} KB")
 else:
     print("MTL FILE NOT FOUND")
+
+# ============================================================
+# PACKAGE + DOWNLOAD OBJ
+# ============================================================
+
+import shutil
+import zipfile
+
+zip_path = os.path.join(MODEL_DIR, "VILLA_000001_MODERN_OBJ.zip")
+
+files_to_zip = []
+
+for p in [obj_path, mtl_path]:
+    if os.path.exists(p):
+        files_to_zip.append(p)
+
+if files_to_zip:
+
+    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        for p in files_to_zip:
+            zf.write(p, arcname=os.path.basename(p))
+
+    print("ZIP CREATED:", zip_path)
+    print(f"ZIP SIZE: {os.path.getsize(zip_path)/1024:.1f} KB")
+
+else:
+    print("NOTHING TO ZIP - OBJ/MTL MISSING")
