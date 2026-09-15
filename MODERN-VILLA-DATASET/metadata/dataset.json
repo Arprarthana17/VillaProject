@@ -1,0 +1,28 @@
+{
+  "dataset_name": "Modern Villa Dataset",
+  "sample_id": "VILLA_000001",
+  "description": "G+1 modern villa procedural Blender model with progressive construction stages.",
+  "total_area_sqft": 1740,
+  "ground_floor_sqft": 870,
+  "first_floor_sqft": 870,
+  "stages": [
+    "01_FOUNDATION",
+    "02_GROUND_FLOOR",
+    "03_FIRST_FLOOR",
+    "04_COLUMNS",
+    "05_WALLS",
+    "06_SLABS",
+    "07_STAIRCASE",
+    "08_WINDOWS_DOORS",
+    "09_BALCONY_ROOF",
+    "10_FACADE_LANDSCAPE",
+    "11_FINAL_ASSEMBLED"
+  ],
+  "model_formats": [
+    "OBJ",
+    "MTL",
+    "GLB"
+  ],
+  "image_format": "PNG",
+  "units": "meters internally; area specified in square feet"
+}
